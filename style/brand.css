@@ -1,0 +1,253 @@
+/* =========================
+   Brand page
+========================= */
+
+.brand-page {
+  background-color: #FFFFFF;
+  color: var(--navy);
+}
+
+/* nav active */
+.gnb a {
+  position: relative;
+}
+
+.gnb a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--navy);
+  transform: translateX(-50%);
+}
+
+/* =========================
+   Brand hero - desktop
+========================= */
+
+.brand-hero {
+  position: relative;
+  height: 460px;
+  background: url("../images/brand_header_bg_d.png") center center / cover no-repeat;
+  overflow: hidden;
+}
+
+.brand-hero-logo {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 204px;
+  transform: translateX(-50%);
+}
+
+.brand-hero-logo img {
+  display: block;
+  width: 100%;
+}
+
+/* =========================
+   Brand story - desktop
+========================= */
+
+.brand-story {
+  position: relative;
+  min-height: 1000px;
+  padding: 105px 0 140px;
+  background-color: #FFFFFF;
+  overflow: visible;
+  z-index: 2;
+}
+
+.brand-story-inner {
+  position: relative;
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 3;
+}
+
+.brand-story-title {
+  flex: 0 0 320px;
+  width: 320px;
+  padding-top: 5px;
+}
+
+.brand-story-title p {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-story-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 44px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.brand-story-text {
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.brand-story-text p {
+  margin: 0 0 27px;
+}
+
+.brand-story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* badges */
+.brand-story-badge {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+
+.brand-story-badge-left {
+  width: 196px;
+  left: 2%;
+  top: -160px;
+  z-index: 100;
+  animation: badgeSwingRotateSmall 3s ease-in-out infinite;
+}
+
+.brand-story-badge-right {
+  width: 300px;
+  right: 2%;
+  bottom: -305px;
+  z-index: 10;
+  animation: badgeSwing 3s ease-in-out infinite;
+}
+
+/* =========================
+   Brand page responsive
+========================= */
+
+@media (max-width: 768px) {
+  /* header */
+  .brand-page .header,
+  .brand-page .header.is-scroll {
+    background-color: transparent;
+  }
+
+  .brand-page .nav {
+    height: 60px;
+    padding: 0 20px;
+    background-color: transparent;
+  }
+
+  .brand-page .logo img {
+    width: 66px;
+  }
+
+  .brand-page .gnb,
+  .brand-page .nav-btn {
+    display: none;
+  }
+
+  .brand-page .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* hero */
+  .brand-hero {
+    height: 228px;
+    background-image: url("../images/brand_header_bg_m.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  .brand-hero-logo {
+    width: 112px;
+    top: 95px;
+  }
+
+  /* story */
+  .brand-story {
+    min-height: auto;
+    padding: 42px 20px 135px;
+    overflow: visible;
+  }
+
+  .brand-story-inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-top: 0;
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+
+  .brand-story-title {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .brand-story-title p {
+    margin: 0 0 17px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-story-title h2 {
+    margin: 0;
+    font-size: 31px;
+    line-height: 1.35;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .brand-story-text {
+    width: 100%;
+    margin: 43px 0 200px;
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  .brand-story-text p {
+    margin: 0 0 26px;
+  }
+
+  .brand-story-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* badges */
+  .brand-story-badge {
+    z-index: 10;
+  }
+
+  .brand-story-badge-left {
+    width: 108px;
+    left: 10px;
+    top: -74px;
+  }
+
+  .brand-story-badge-right {
+    width: 152px;
+    right: 5px;
+    bottom: -250px;
+  }
+}

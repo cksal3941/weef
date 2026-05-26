@@ -35,3 +35,20 @@ mobileMenuDim?.addEventListener("click", closeMobileMenu);
 mobileMenuLinks.forEach((link) => {
   link.addEventListener("click", closeMobileMenu);
 });
+
+const accSwiper = new Swiper(".acc-swiper", {
+  loop: true,
+  speed: 600,
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+  pagination: {
+    el: ".acc-slide-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".acc-slide-next",
+    prevEl: ".acc-slide-prev",
+  },
+});
