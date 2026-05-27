@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WEEF Brand</title>
+  <title>WEEF ACC</title>
   <link rel="icon" href="./images/00_icon_logo.png">
 
   <!-- SUIT Variable -->
@@ -57,64 +57,82 @@
       <ul class="mobile-menu-list">
         <li><a href="./brand.html">BRAND</a></li>
         <li><a href="./dish.html">DISH LIQUID</a></li>
-        <li><a href="./acc.html">ACC</a></li>
+        <li><a href="./acc.html" class="is-active">ACC</a></li>
       </ul>
     </aside>
   </header>
 
   <!-- main -->
-  <main class="acc-page">
-    <section class="acc-hero">
-      <img src="./images/acc_text_b.png" alt="KITCHEN ACC" class="acc-hero-title">
-    </section>
-  
-    <section class="acc-product-area">
-      <div class="acc-product-inner">
-        <div class="acc-slide-box">
-          <div class="swiper acc-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./images/acc_slide1.jpg" alt="ACC slide 1">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/acc_slide2.jpg" alt="ACC slide 2">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/acc_slide3.jpg" alt="ACC slide 3">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/acc_slide4.jpg" alt="ACC slide 4">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/acc_slide5.jpg" alt="ACC slide 5">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/acc_slide6.jpg" alt="ACC slide 6">
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/acc_slide7.jpg" alt="ACC slide 7">
-              </div>
+  <!-- <section class="acc-hero">
+    <div class="acc-hero-title-area">
+      <img
+        src="./images/acc_text_b.png"
+        alt="KITCHEN ACC"
+        class="acc-hero-title"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+    </div>
+  </section> -->
+
+  <section class="acc-hero">
+    <div class="acc-hero-title-area">
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/acc_text_m.png">
+        <img src="./images/acc_text_b.png" alt="KITCHEN ACC" class="acc-hero-title">
+      </picture>
+    </div>
+  </section>
+
+  <section class="acc-product-area">
+    <div class="acc-product-inner">
+      <div class="acc-slide-box" data-aos="zoom-in-up"  data-aos-delay="150" data-aos-duration="700">
+        <div class="swiper acc-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/acc_slide1.jpg" alt="ACC slide 1">
             </div>
-  
-            <div class="swiper-button-prev acc-slide-prev"></div>
-            <div class="swiper-button-next acc-slide-next"></div>
-            <div class="swiper-pagination acc-slide-pagination"></div>
+            <div class="swiper-slide">
+              <img src="./images/acc_slide2.jpg" alt="ACC slide 2">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/acc_slide3.jpg" alt="ACC slide 3">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/acc_slide4.jpg" alt="ACC slide 4">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/acc_slide5.jpg" alt="ACC slide 5">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/acc_slide6.jpg" alt="ACC slide 6">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/acc_slide7.jpg" alt="ACC slide 7">
+            </div>
           </div>
-        </div>
-  
-        <div class="acc-product-text">
-          <h2>WEEF 주방용 수세미</h2>
-  
-          <p>
-            풍성한 거품을 위한 WEEF 주방용 수세미는<br>
-            양면 구조로 다양한 오염을 손쉽게 세척하고, 항균력까지 독하게 챙겨<br>
-            안전하고 청결한 주방 환경을 완성합니다.
-          </p>
-  
-          <a href="#" class="acc-buy-btn">WEEF 주방용 수세미 구매하기</a>
+
+          <div class="swiper-button-prev acc-slide-prev"></div>
+          <div class="swiper-button-next acc-slide-next"></div>
+          <div class="swiper-pagination acc-slide-pagination"></div>
         </div>
       </div>
-    </section>
+
+      <div class="acc-product-text">
+        <h2 data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">WEEF 주방용 수세미</h2>
+
+        <p data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
+          풍성한 거품을 위한 WEEF 주방용 수세미는<br>
+          양면 구조로 다양한 오염을 손쉽게 세척하고, 항균력까지 독하게 챙겨<br>
+          안전하고 청결한 주방 환경을 완성합니다.
+        </p>
+
+        <a href="#" class="acc-buy-btn" data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="700">WEEF 주방용 수세미 구매하기</a>
+      </div>
+    </div>
+  </section>
   </main>
 
   <footer class="footer">

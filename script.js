@@ -1,3 +1,20 @@
+if (window.innerWidth > 768) {
+  const accHeroTitle = document.querySelector(".acc-hero-title");
+
+  if (accHeroTitle) {
+    accHeroTitle.setAttribute("data-aos", "fade-up");
+    accHeroTitle.setAttribute("data-aos-delay", "300");
+    accHeroTitle.setAttribute("data-aos-duration", "800");
+  }
+}
+
+AOS.init({
+  duration: 700,
+  easing: "ease-out",
+  once: true,
+  offset: 80,
+});
+
 AOS.init({
   duration: 900,
   easing: 'ease-out-cubic',
@@ -38,9 +55,14 @@ mobileMenuLinks.forEach((link) => {
 
 const accSwiper = new Swiper(".acc-swiper", {
   loop: true,
-  speed: 600,
+  speed: 700,
   slidesPerView: 1,
   spaceBetween: 0,
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
   pagination: {
     el: ".acc-slide-pagination",
@@ -51,4 +73,7 @@ const accSwiper = new Swiper(".acc-swiper", {
     nextEl: ".acc-slide-next",
     prevEl: ".acc-slide-prev",
   },
+
+  observer: true,
+  observeParents: true,
 });
