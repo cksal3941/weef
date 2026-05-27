@@ -30,7 +30,7 @@
 .brand-hero {
   position: relative;
   height: 460px;
-  background: url("../images/brand_header_bg_d.png") center center / cover no-repeat;
+  background: url("./images/brand_header_bg_d.png") center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -168,7 +168,7 @@
   /* hero */
   .brand-hero {
     height: 228px;
-    background-image: url("../images/brand_header_bg_m.jpg");
+    background-image: url("./images/brand_header_bg_m.jpg");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
