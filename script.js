@@ -1,3 +1,7 @@
+/* =========================
+   ACC hero AOS setting
+========================= */
+
 if (window.innerWidth > 768) {
   const accHeroTitle = document.querySelector(".acc-hero-title");
 
@@ -8,29 +12,38 @@ if (window.innerWidth > 768) {
   }
 }
 
-AOS.init({
-  duration: 700,
-  easing: "ease-out",
-  once: true,
-  offset: 80,
-});
+/* =========================
+   AOS
+========================= */
 
-AOS.init({
-  duration: 900,
-  easing: 'ease-out-cubic',
-  once: true,
-  offset: 120
-});
+if (typeof AOS !== "undefined") {
+  AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 120,
+  });
+}
 
-const header = document.querySelector('.header');
+/* =========================
+   Header scroll
+========================= */
 
-window.addEventListener('scroll', function () {
-  if (window.scrollY > 20) {
-    header.classList.add('is-scroll');
-  } else {
-    header.classList.remove('is-scroll');
-  }
-});
+const header = document.querySelector(".header");
+
+if (header) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 20) {
+      header.classList.add("is-scroll");
+    } else {
+      header.classList.remove("is-scroll");
+    }
+  });
+}
+
+/* =========================
+   Mobile menu
+========================= */
 
 const mobileMenuButton = document.querySelector(".mobile-menu-btn");
 const mobileMenuCloseButton = document.querySelector(".mobile-menu-close");
@@ -53,27 +66,59 @@ mobileMenuLinks.forEach((link) => {
   link.addEventListener("click", closeMobileMenu);
 });
 
-const accSwiper = new Swiper(".acc-swiper", {
-  loop: true,
-  speed: 700,
-  slidesPerView: 1,
-  spaceBetween: 0,
+/* =========================
+   ACC swiper
+========================= */
 
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+if (typeof Swiper !== "undefined" && document.querySelector(".acc-swiper")) {
+  const accSwiper = new Swiper(".acc-swiper", {
+    loop: true,
+    speed: 700,
+    slidesPerView: 1,
+    spaceBetween: 0,
 
-  pagination: {
-    el: ".acc-slide-pagination",
-    clickable: true,
-  },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
 
-  navigation: {
-    nextEl: ".acc-slide-next",
-    prevEl: ".acc-slide-prev",
-  },
+    pagination: {
+      el: ".acc-slide-pagination",
+      clickable: true,
+    },
 
-  observer: true,
-  observeParents: true,
-});
+    navigation: {
+      nextEl: ".acc-slide-next",
+      prevEl: ".acc-slide-prev",
+    },
+
+    observer: true,
+    observeParents: true,
+  });
+}
+
+/* =========================
+   Dish image swiper
+========================= */
+
+if (typeof Swiper !== "undefined" && document.querySelector(".dish-image-swiper")) {
+  const dishImageSwiper = new Swiper(".dish-image-swiper", {
+    loop: true,
+    speed: 800,
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    centeredSlides: false,
+    watchOverflow: false,
+
+    autoplay: {
+      delay: 2200,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
+
+    navigation: {
+      nextEl: ".dish-slide-next",
+      prevEl: ".dish-slide-prev",
+    },
+  });
+}

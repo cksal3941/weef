@@ -1,0 +1,823 @@
+/* =========================
+   Dish Liquid page
+========================= */
+
+.dish-page {
+  background-color: #FFFFFF;
+  color: var(--navy);
+}
+
+.dish-inner {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.image-placeholder {
+  background-color: #F3F6F8;
+}
+
+.gnb a {
+  position: relative;
+}
+
+.gnb a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--navy);
+  transform: translateX(-50%);
+}
+
+/* hero */
+.dish-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 900px;
+  background-image: url("../images/dish_hero_bg_d.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.dish-hero-inner {
+  position: relative;
+  width: min(1400px, calc(100% - 80px));
+  height: 100%;
+  margin: 0 auto;
+}
+
+.dish-hero-content {
+  position: absolute;
+  left: 0;
+  top: 155px;
+  width: 580px;
+  color: var(--navy);
+}
+
+.dish-hero-title {
+  display: block;
+  width: 470px;
+  max-width: none;
+}
+
+.dish-hero-sub {
+  margin: 58px 0 0;
+  color: var(--navy);
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.dish-hero-desc {
+  margin: 205px 0 0;
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+/* =========================
+   Dish clean section - desktop
+========================= */
+
+.dish-clean-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: visible;
+}
+
+.dish-clean-text {
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 165px 0 72px;
+}
+
+.dish-clean-text h2 {
+  margin: 0 0 52px;
+  color: var(--navy);
+  font-size: 52px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-clean-text p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.9;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.dish-clean-visual {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  background-image: url("../images/dish_clean-visual_bg_d.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.dish-clean-badge {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dish-clean-badge-1 {
+  width: 142px;
+  right: 19%;
+  top: -72px;
+  animation: dishBadgeFloat 3.4s ease-in-out infinite;
+}
+
+.dish-clean-badge-2 {
+  width: 138px;
+  left: 21%;
+  bottom: -78px;
+  animation: dishBadgeFloatRotate 3.8s ease-in-out infinite;
+}
+
+@keyframes dishBadgeFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes dishBadgeFloatRotate {
+  0% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(-4deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+}
+
+/* =========================
+   Dish feature section - desktop
+========================= */
+
+.dish-feature-section {
+  position: relative;
+  padding: 150px 0 170px;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: visible;
+}
+
+.dish-feature-inner {
+  width: min(960px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.dish-feature-row {
+  display: grid;
+  grid-template-columns: 1fr 470px;
+  column-gap: 85px;
+  align-items: center;
+}
+
+.dish-feature-row + .dish-feature-row {
+  margin-top: 150px;
+}
+
+.dish-feature-row-2 {
+  grid-template-columns: 470px 1fr;
+}
+
+.dish-feature-text h2 {
+  margin: 0 0 28px;
+  color: var(--navy);
+  font-size: 34px;
+  line-height: 1.28;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-feature-text p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.dish-feature-image {
+  width: 470px;
+  height: 560px;
+  overflow: hidden;
+}
+
+.dish-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   Dish lemon section - desktop
+========================= */
+
+.dish-lemon-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: visible;
+}
+
+.dish-lemon-text {
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 150px 0 72px;
+}
+
+.dish-lemon-text h2 {
+  margin: 0 0 34px;
+  color: var(--navy);
+  font-size: 52px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-lemon-text strong {
+  display: block;
+  margin: 0 0 46px;
+  color: var(--teal);
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.dish-lemon-text p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.9;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.dish-lemon-visual {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+  background-image: url("../images/dish_lemon_bg_d.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  overflow: visible;
+}
+
+.dish-lemon-badge {
+  position: absolute;
+  right: 16%;
+  top: -105px;
+  width: 265px;
+  max-width: none;
+  z-index: 3;
+  pointer-events: none;
+  animation: dishBadgeFloatRotate 3.8s ease-in-out infinite;
+}
+
+/* =========================
+   Dish gallery section - desktop
+========================= */
+
+.dish-gallery-section {
+  position: relative;
+  padding: 120px 0 180px;
+  background-color: #FFFFFF;
+  overflow: visible;
+}
+
+.dish-gallery-inner {
+  position: relative;
+  width: min(1350px, calc(100% - 80px));
+  height: 610px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.dish-gallery-item {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  overflow: hidden;
+}
+
+.dish-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* left image */
+.dish-gallery-item-1 {
+  left: 0;
+  top: 0;
+}
+
+/* center image */
+.dish-gallery-item-2 {
+  left: 50%;
+  top: 140px;
+  transform: translateX(-50%);
+}
+
+/* right image */
+.dish-gallery-item-3 {
+  right: 0;
+  top: 230px;
+}
+
+/* badge */
+.dish-gallery-badge {
+  position: absolute;
+  left: 50%;
+  top: 84px;
+  width: 230px;
+  height: auto;
+  max-width: none;
+  transform: translateX(10%) rotate(8deg);
+  z-index: 5;
+  pointer-events: none;
+  animation: dishGalleryBadgeFloat 3.6s ease-in-out infinite;
+}
+
+@keyframes dishGalleryBadgeFloat {
+  0% {
+    transform: translateX(10%) translateY(0) rotate(8deg);
+  }
+
+  50% {
+    transform: translateX(10%) translateY(-12px) rotate(11deg);
+  }
+
+  100% {
+    transform: translateX(10%) translateY(0) rotate(8deg);
+  }
+}
+
+/* =========================
+   Dish kitchen section - desktop
+========================= */
+
+.dish-kitchen-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: hidden;
+}
+
+.dish-kitchen-text {
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 150px 0 90px;
+}
+
+.dish-kitchen-text h2 {
+  margin: 0 0 52px;
+  color: var(--navy);
+  font-size: 52px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-kitchen-text p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.9;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.dish-kitchen-visual {
+  width: 100%;
+  height: 1100px;
+  background-image: url("../images/dish_kitchen_d.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   Dish detail section - desktop
+========================= */
+
+.dish-detail-section {
+  position: relative;
+  padding: 130px 0 190px;
+  background-color: #FFFFFF;
+  overflow: visible;
+}
+
+.dish-detail-inner {
+  position: relative;
+  width: min(1120px, calc(100% - 80px));
+  height: 700px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.dish-detail-img {
+  position: absolute;
+  overflow: hidden;
+}
+
+.dish-detail-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* top right image */
+.dish-detail-img-1 {
+  right: 0;
+  top: 0;
+  width: 520px;
+  height: 300px;
+}
+
+/* bottom left image */
+.dish-detail-img-2 {
+  left: 145px;
+  top: 250px;
+  width: 430px;
+  height: 520px;
+}
+
+/* green badge */
+.dish-detail-badge {
+  position: absolute;
+  left: 480px;
+  top: 575px;
+  width: 350px;
+  height: auto;
+  max-width: none;
+  z-index: 5;
+  pointer-events: none;
+  animation: dishDetailBadgeFloat 3.6s ease-in-out infinite;
+}
+
+@keyframes dishDetailBadgeFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* =========================
+   Dish banana section - desktop
+========================= */
+
+.dish-banana-section {
+  position: relative;
+  padding: 150px 0 210px;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: hidden;
+}
+
+.dish-banana-inner {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  column-gap: 130px;
+  align-items: center;
+}
+
+.dish-banana-text h2 {
+  margin: 0 0 44px;
+  color: var(--navy);
+  font-size: 42px;
+  line-height: 1.28;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-banana-text p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.dish-banana-image {
+  width: 640px;
+  height: 420px;
+  overflow: hidden;
+}
+
+.dish-banana-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* =========================
+   Dish image slide section - desktop
+========================= */
+
+.dish-slide-section {
+  position: relative;
+  padding: 130px 0 0;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: hidden;
+}
+
+.dish-slide-title {
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto 72px;
+  text-align: center;
+}
+
+.dish-slide-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 42px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-image-swiper {
+  position: relative;
+  width: 100%;
+  height: 610px;
+  overflow: hidden;
+}
+
+.dish-image-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.dish-image-swiper .swiper-slide {
+  width: 460px;
+  height: 610px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.dish-image-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* arrows */
+.dish-slide-prev,
+.dish-slide-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.42);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dish-slide-prev::after,
+.dish-slide-next::after {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.dish-slide-prev {
+  left: 24px;
+}
+
+.dish-slide-next {
+  right: 24px;
+}
+
+/* =========================
+   Dish products section - desktop
+========================= */
+
+.dish-products-section {
+  position: relative;
+  padding: 140px 0 190px;
+  background-color: #FFFFFF;
+  color: var(--navy);
+  overflow: hidden;
+}
+
+.dish-products-inner {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.dish-products-title {
+  margin: 0 0 105px;
+  color: var(--navy);
+  font-size: 42px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+
+.dish-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 110px;
+  align-items: start;
+}
+
+.dish-product-card {
+  text-align: center;
+}
+
+.dish-product-image {
+  width: 210px;
+  height: 310px;
+  margin: 0 auto 72px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dish-product-image img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+}
+
+.dish-product-card h3 {
+  margin: 0 0 52px;
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.dish-product-info {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(27, 40, 83, 0.14);
+}
+
+.dish-product-info li {
+  min-height: 70px;
+  padding: 23px 20px;
+  border-bottom: 1px solid rgba(27, 40, 83, 0.14);
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dish-product-info li:nth-child(3) {
+  min-height: 150px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.dish-product-info li:last-child {
+  min-height: 70px;
+}
+
+.dish-product-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 295px;
+  height: 52px;
+  margin-top: 64px;
+  padding: 0 34px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.dish-product-btn:hover {
+  background-color: #FFFFFF;
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+
+/* 지우면 안됨 */
+.dish-fixed-cta {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 90;
+  width: 100%;
+  height: 112px;
+  background-color: var(--navy);
+  color: var(--white);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dish-fixed-cta-inner {
+  width: min(1280px, calc(100% - 80px));
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dish-fixed-cta p {
+  margin: 0;
+  color: var(--white);
+  font-size: 22px;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.dish-fixed-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  height: 48px;
+  padding: 0 34px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.dish-fixed-cta-btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+.dish-fixed-cta.is-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
