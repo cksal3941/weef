@@ -107,7 +107,6 @@ if (typeof Swiper !== "undefined" && document.querySelector(".dish-image-swiper"
     speed: 800,
     slidesPerView: "auto",
     spaceBetween: 16,
-    centeredSlides: false,
     watchOverflow: false,
 
     autoplay: {
@@ -119,6 +118,17 @@ if (typeof Swiper !== "undefined" && document.querySelector(".dish-image-swiper"
     navigation: {
       nextEl: ".dish-slide-next",
       prevEl: ".dish-slide-prev",
+    },
+
+    breakpoints: {
+      0: {
+        centeredSlides: true,
+        spaceBetween: 16,
+      },
+      769: {
+        centeredSlides: false,
+        spaceBetween: 16,
+      },
     },
   });
 }
