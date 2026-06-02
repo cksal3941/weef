@@ -235,13 +235,15 @@
   word-break: keep-all;
 }
 
-.dish-feature-image1 {
+.dish-feature-image1,
+.dish-feature-image2 {
   width: 430px;
   height: 580px;
   overflow: hidden;
 }
 
-.dish-feature-image img {
+.dish-feature-image1 img,
+.dish-feature-image2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -432,12 +434,12 @@
   word-break: keep-all;
 }
 
-.dish-kitchen-visual img{
+.dish-kitchen-visual img {
+  display: block;
   width: 100%;
   height: 1100px;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center top;
 }
 
 /* =========================
@@ -655,7 +657,7 @@
 
 .dish-products-section {
   position: relative;
-  padding: 140px 0 190px;
+  padding: 250px 0 190px;
   background-color: #FFFFFF;
   color: var(--navy);
   overflow: hidden;
@@ -826,10 +828,11 @@
 }
 
 /* =========================
-   Dish hero - mobile
+   Dish responsive
 ========================= */
 
 @media (max-width: 768px) {
+  /* mobile menu active */
   .mobile-menu-list {
     padding: 0;
   }
@@ -853,6 +856,7 @@
     color: #FFFFFF;
   }
 
+  /* hero */
   .dish-hero-pin {
     position: relative;
     height: auto;
@@ -860,14 +864,11 @@
   }
 
   .dish-hero {
-    position: relative;
-    top: auto;
     height: 760px;
     min-height: 0;
     background-image: url("../images/dish_hero_bg_m.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: scroll;
     overflow: hidden;
   }
@@ -879,11 +880,9 @@
   }
 
   .dish-hero-content {
-    position: absolute;
     left: 20px;
     top: 108px;
     width: calc(100% - 40px);
-    color: var(--navy);
   }
 
   .dish-hero-title-wrap {
@@ -892,69 +891,59 @@
   }
 
   .dish-hero-title {
-    display: block;
     width: 100%;
-    max-width: none;
   }
 
   .dish-hero-sub {
-    margin: 20px 0 0;
-    color: var(--navy);
+    margin-top: 16px;
     font-size: 14px;
     line-height: 1.4;
     font-weight: 700;
-    letter-spacing: -0.04em;
   }
 
   .dish-hero-desc {
     display: none;
   }
 
-  /* =========================
-   Dish clean section - mobile
-========================= */
-
+  /* clean */
   .dish-clean-section {
     position: relative;
     z-index: 2;
-    background-color: #FFFFFF;
     overflow: visible;
   }
 
   .dish-clean-text {
-    width: 100%;
+    width: 70%;
     margin: 0;
-    padding: 56px 20px 58px;
+    padding: 120px 20px 58px;
   }
 
   .dish-clean-text h2 {
-    margin-bottom: 24px;
-    color: var(--navy);
+    margin-bottom: 20px;
     font-size: 31px;
     line-height: 1.32;
     font-weight: 800;
-    letter-spacing: -0.05em;
   }
 
   .dish-clean-text p {
-    margin: 0;
-    color: var(--navy);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.75;
-    font-weight: 500;
-    letter-spacing: -0.04em;
+    font-weight: 400;
     word-break: keep-all;
   }
 
   .dish-clean-visual {
-    position: relative;
-    width: 100%;
-    height: 505px;
-    background-image: url("../images/dish_clean-visual_bg_m.jpg");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    height: auto;
+    background: none;
     overflow: visible;
+  }
+
+  .dish-clean-bg {
+    content: url("../images/dish_clean-visual_bg_m.jpg");
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
   }
 
   .dish-clean-badge {
@@ -970,7 +959,6 @@
     width: 60px;
     right: 26px;
     top: -31px;
-    animation: dishBadgeFloat 3.4s ease-in-out infinite;
   }
 
   .dish-clean-badge-2 {
@@ -978,40 +966,12 @@
     width: 76px;
     left: 34px;
     bottom: -27px;
-    animation: dishBadgeFloatRotate 3.8s ease-in-out infinite;
   }
 
-  /*  Dish feature section*/
+  /* feature */
   .dish-feature-section {
     padding: 72px 0 90px;
-  }
-
-  .dish-feature-text {
-    width: calc(100% - 36px);
-    margin: 0 auto;
-  }
-
-  .dish-feature-row {
-    gap: 26px;
-  }
-
-  .dish-feature-row-1 .dish-feature-image {
-    width: calc(100% - 56px);
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  .dish-feature-row-2 .dish-feature-image {
-    width: calc(100% - 36px);
-    margin-left: 18px;
-    margin-right: auto;
-  }
-
-  .dish-feature-row-1 .dish-feature-image img,
-  .dish-feature-row-2 .dish-feature-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    overflow: hidden;
   }
 
   .dish-feature-inner {
@@ -1026,19 +986,11 @@
     gap: 26px;
   }
 
-  .dish-feature-row+.dish-feature-row {
+  .dish-feature-row + .dish-feature-row {
     margin-top: 72px;
   }
 
-  .dish-feature-row-1 {
-    flex-direction: column;
-  }
-
-  .dish-feature-row-2 {
-    flex-direction: column;
-  }
-
-  .dish-feature-row-2 .dish-feature-image {
+  .dish-feature-row-2 .dish-feature-image2 {
     order: 1;
   }
 
@@ -1046,36 +998,28 @@
     order: 2;
   }
 
-  .dish-feature-text {
-    width: 100%;
-  }
-
   .dish-feature-text h2 {
     margin: 0 0 14px;
-    color: var(--navy);
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.32;
     font-weight: 800;
-    letter-spacing: -0.05em;
   }
 
   .dish-feature-text p {
-    margin: 0;
-    color: var(--navy);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.72;
     font-weight: 500;
-    letter-spacing: -0.04em;
     word-break: keep-all;
   }
 
-  .dish-feature-image {
-    width: 100%;
+  .dish-feature-image1,
+  .dish-feature-image2 {
     height: auto;
     overflow: hidden;
   }
 
-  .dish-feature-image img {
+  .dish-feature-image1 img,
+  .dish-feature-image2 img {
     display: block;
     width: 100%;
     height: auto;
@@ -1083,137 +1027,104 @@
     object-fit: contain;
   }
 
-  .dish-feature-row-1 .dish-feature-text {
+  .dish-feature-row-1 .dish-feature-text,
+  .dish-feature-row-1 .dish-feature-image1 {
     width: calc(100% - 56px);
     margin-left: auto;
     margin-right: 0;
   }
 
-  .dish-feature-row-1 .dish-feature-image {
-    width: calc(100% - 56px);
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  /* 두 번째 묶음: 텍스트와 이미지를 같은 기준선으로 정렬 */
-  .dish-feature-row-2 .dish-feature-text {
-    width: calc(100% - 36px);
-    margin-left: 18px;
-    margin-right: auto;
-  }
-
-  .dish-feature-row-2 .dish-feature-image {
-    width: calc(100% - 36px);
-    margin-left: 18px;
-    margin-right: auto;
-  }
-
-  .dish-feature-row-1 .dish-feature-image img {
+  .dish-feature-row-1 .dish-feature-image1 img {
     content: url("../images/dish_feature1_m.jpg");
   }
 
-  .dish-feature-row-2 .dish-feature-image img {
+  .dish-feature-row-2 .dish-feature-text,
+  .dish-feature-row-2 .dish-feature-image2 {
+    width: calc(80% - 36px);
+    margin-left: 18px;
+    margin-right: auto;
+  }
+
+  .dish-feature-row-2 .dish-feature-image2 img {
     content: url("../images/dish_feature2_m.jpg");
   }
 
-  /*  Dish lemon section */
-  .dish-lemon-section {
-    position: relative;
-    background-color: #FFFFFF;
-    color: var(--navy);
-    overflow: visible;
-  }
-
+  /* lemon */
   .dish-lemon-text {
     width: 100%;
     margin: 0;
-    padding: 76px 20px 62px;
+    padding: 90px 20px 62px;
   }
 
   .dish-lemon-text h2 {
-    margin: 0 0 20px;
-    color: var(--navy);
+    margin-bottom: 14px;
     font-size: 30px;
     line-height: 1.34;
     font-weight: 800;
-    letter-spacing: -0.055em;
+    letter-spacing: 0.008em;
     word-break: keep-all;
   }
 
   .dish-lemon-text strong {
-    display: block;
-    margin: 0 0 20px;
-    color: var(--teal);
+    margin-bottom: 16px;
     font-size: 15px;
     line-height: 1.45;
-    font-weight: 900;
-    letter-spacing: -0.035em;
+    font-weight: 800;
   }
 
   .dish-lemon-text p {
-    margin: 0;
-    color: var(--navy);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.75;
     font-weight: 500;
-    letter-spacing: -0.04em;
     word-break: keep-all;
   }
 
   .dish-lemon-visual {
-    position: relative;
-    width: 100%;
     height: 550px;
     background-image: url("../images/dish_lemon_bg_m.jpg");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    overflow: visible;
   }
 
   .dish-lemon-badge {
     content: url("../images/dish_lemon_badge_m.png");
-    position: absolute;
     right: 22px;
     top: -38px;
     width: 104px;
-    height: auto;
-    max-width: none;
-    z-index: 5;
-    pointer-events: none;
-    animation: dishBadgeFloatRotate 3.8s ease-in-out infinite;
   }
 
-  /* Dish gallery section */
-  .dish-gallery-section {
+  /* gallery */
+  .dish-gallery-section,
+  .dish-gallery-inner,
+  .dish-detail-section,
+  .dish-detail-inner {
     position: relative;
-    padding: 72px 0 96px;
-    background-color: #FFFFFF;
     overflow: visible;
+  }
+
+  .dish-gallery-section {
+    padding: 72px 0 96px;
   }
 
   .dish-gallery-inner {
-    position: relative;
     width: 100%;
     height: auto;
     margin: 0;
-    overflow: visible;
   }
 
   .dish-gallery-item {
     position: relative;
+    height: auto;
     overflow: hidden;
   }
 
   .dish-gallery-item img {
-    display: block;
     width: 100%;
     height: auto;
-    max-width: none;
     object-fit: contain;
   }
 
-  /* 첫 번째 이미지 */
   .dish-gallery-item-1 {
     width: calc(100% - 118px);
     margin-left: auto;
@@ -1221,14 +1132,12 @@
     top: auto;
     left: auto;
     right: auto;
-    height: auto;
   }
 
   .dish-gallery-item-1 img {
     content: url("../images/dish_gallery1_m.jpg");
   }
 
-  /* 두 번째 이미지 */
   .dish-gallery-item-2 {
     width: calc(100% - 150px);
     margin-top: 42px;
@@ -1237,7 +1146,6 @@
     top: auto;
     left: auto;
     right: auto;
-    height: auto;
     transform: none;
     overflow: visible;
   }
@@ -1246,7 +1154,6 @@
     content: url("../images/dish_gallery2_m.jpg");
   }
 
-  /* 세 번째 이미지 */
   .dish-gallery-item-3 {
     width: calc(100% - 82px);
     margin-top: 42px;
@@ -1255,103 +1162,82 @@
     top: auto;
     left: auto;
     right: auto;
-    height: auto;
   }
 
   .dish-gallery-item-3 img {
     content: url("../images/dish_gallery3_m.jpg");
   }
 
-  /* WEEF 배지 */
   .dish-gallery-badge {
     content: url("../images/dish_gallery_badge_m.png");
-    position: absolute;
-    right: 26px;
-    top: 462px;
-    width: 94px;
-    height: auto;
-    max-width: none;
-    z-index: 5;
-    pointer-events: none;
-    animation: dishGalleryBadgeFloat 3.6s ease-in-out infinite;
+    position: absolute !important;
+    width: 94px !important;
+    right: clamp(30px, 8vw, 40px) !important;
+    top: 44% !important;
+    z-index: 20 !important;
   }
 
-  /* Dish kitchen section  */
-  .dish-kitchen-section {
-    position: relative;
-    background-color: #FFFFFF;
-    color: var(--navy);
-    overflow: hidden;
-  }
-
+  /* kitchen */
   .dish-kitchen-text {
     width: 100%;
     margin: 0;
-    padding: 76px 20px 62px;
+    padding: 80px 20px 62px;
   }
 
   .dish-kitchen-text h2 {
-    margin: 0 0 26px;
-    color: var(--navy);
+    margin-bottom: 20px;
     font-size: 30px;
     line-height: 1.34;
     font-weight: 800;
-    letter-spacing: -0.055em;
     word-break: keep-all;
   }
 
   .dish-kitchen-text p {
-    margin: 0;
-    color: var(--navy);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.75;
     font-weight: 500;
-    letter-spacing: -0.04em;
     word-break: keep-all;
   }
 
   .dish-kitchen-visual {
     width: 100%;
-    height: 550px;
-    background-image: url("../images/dish_kitchen_m.jpg");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    height: 530px;
+    overflow: hidden;
   }
 
-  /* Dish detail section */
+  .dish-kitchen-visual img {
+    content: url("../images/dish_kitchen_m.jpg");
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+
+  /* detail */
   .dish-detail-section {
-    position: relative;
-    padding: 72px 0 96px;
-    background-color: #FFFFFF;
-    overflow: visible;
+    padding: 60px 0 96px;
   }
 
   .dish-detail-inner {
-    position: relative;
     width: 100%;
     height: auto;
     margin: 0;
-    overflow: visible;
   }
 
   .dish-detail-img {
     position: relative;
+    height: auto;
     overflow: hidden;
   }
 
   .dish-detail-img img {
-    display: block;
     width: 100%;
     height: auto;
-    max-width: none;
     object-fit: contain;
   }
 
-  /* 상단 오른쪽 이미지 */
   .dish-detail-img-1 {
-    width: calc(100% - 132px);
-    height: auto;
+    width: calc(100% - 120px);
     margin-left: auto;
     margin-right: 20px;
     top: auto;
@@ -1363,12 +1249,10 @@
     content: url("../images/dish_detail1_m.jpg");
   }
 
-  /* 하단 왼쪽 이미지 */
   .dish-detail-img-2 {
-    width: calc(100% - 130px);
-    height: auto;
+    width: calc(100% - 120px);
     margin-top: 30px;
-    margin-left: 16px;
+    margin-left: 20px;
     margin-right: auto;
     top: auto;
     right: auto;
@@ -1379,27 +1263,20 @@
     content: url("../images/dish_detail2_m.jpg");
   }
 
-  /* 초록 배지 */
   .dish-detail-badge {
     content: url("../images/dish_detail_badge_m.jpg");
-    position: absolute;
-    left: 400px;
-    top: 900px;
-    width: 182px;
-    height: auto;
-    max-width: none;
-    z-index: 10;
-    pointer-events: none;
-    animation: dishDetailBadgeFloat 3.6s ease-in-out infinite;
+    position: absolute !important;
+    width: 182px !important;
+    left: auto !important;
+    right: clamp(18px, 5vw, 32px) !important;
+    top: auto !important;
+    bottom: -20px !important;
+    z-index: 20 !important;
   }
 
-  /*  Dish banana section */
+  /* banana */
   .dish-banana-section {
-    position: relative;
-    padding: 126px 18px 96px;
-    background-color: #FFFFFF;
-    color: var(--navy);
-    overflow: hidden;
+    padding: 100px 18px 96px;
   }
 
   .dish-banana-inner {
@@ -1412,91 +1289,61 @@
 
   .dish-banana-text {
     width: 100%;
+    padding: 0 10px;
   }
 
   .dish-banana-text h2 {
-    margin: 0 0 24px;
-    color: var(--navy);
-    font-size: 28px;
+    margin-bottom: 20px;
+    font-size: 24px;
     line-height: 1.32;
     font-weight: 800;
-    letter-spacing: -0.055em;
     word-break: keep-all;
   }
 
   .dish-banana-text p {
-    margin: 0;
-    color: var(--navy);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.75;
     font-weight: 500;
-    letter-spacing: -0.04em;
     word-break: keep-all;
   }
 
   .dish-banana-image {
     width: 100%;
     height: auto;
-    overflow: hidden;
   }
 
   .dish-banana-image img {
     content: url("../images/dish_banana_m.jpg");
-    display: block;
     width: 100%;
     height: auto;
-    max-width: none;
     object-fit: contain;
   }
 
-  /*  Dish slide section */
+  /* slide */
   .dish-slide-section {
-    position: relative;
     padding: 92px 0 0;
-    background-color: #FFFFFF;
-    color: var(--navy);
-    overflow: hidden;
   }
 
   .dish-slide-title {
     width: 100%;
     margin: 0 auto 52px;
     padding: 0 20px;
-    text-align: center;
   }
 
   .dish-slide-title h2 {
-    margin: 0;
-    color: var(--navy);
     font-size: 30px;
     line-height: 1.36;
-    font-weight: 800;
-    letter-spacing: -0.055em;
     word-break: keep-all;
   }
 
   .dish-image-swiper {
-    position: relative;
-    width: 100%;
     height: 526px;
     overflow: visible;
-  }
-
-  .dish-image-swiper .swiper-wrapper {
-    align-items: stretch;
   }
 
   .dish-image-swiper .swiper-slide {
     width: 396px;
     height: 526px;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-
-  .dish-image-swiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .dish-slide-prev,
@@ -1504,28 +1351,20 @@
     display: none;
   }
 
-  /*  Dish products section */
+  /* products */
   .dish-products-section {
-    position: relative;
-    padding: 92px 17px 120px;
-    background-color: #FFFFFF;
-    color: var(--navy);
-    overflow: hidden;
+    padding: 92px 17px 300px;
   }
 
   .dish-products-inner {
     width: 100%;
-    margin: 0;
   }
 
   .dish-products-title {
-    margin: 0 0 58px;
-    color: var(--navy);
+    width: 60%;
+    margin: 100px auto 40px;
     font-size: 30px;
     line-height: 1.34;
-    font-weight: 800;
-    letter-spacing: -0.055em;
-    text-align: center;
     word-break: keep-all;
   }
 
@@ -1533,11 +1372,13 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 16px;
-    align-items: start;
+    align-items: stretch;
   }
 
   .dish-product-card {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-align: center;
   }
 
@@ -1545,77 +1386,52 @@
     width: 100%;
     height: 245px;
     margin: 0 auto 44px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: visible;
-  }
-
-  .dish-product-image img {
-    display: block;
-    width: auto;
-    height: 100%;
-    max-width: none;
-    object-fit: contain;
   }
 
   .dish-product-card h3 {
-    margin: 0 0 28px;
-    color: var(--navy);
+    margin-bottom: 28px;
     font-size: 15px;
     line-height: 1.35;
-    font-weight: 800;
-    letter-spacing: -0.045em;
     word-break: keep-all;
   }
 
   .dish-product-info {
-    margin: 0;
-    padding: 0;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
     border-top: 1px solid rgba(27, 40, 83, 0.12);
   }
 
   .dish-product-info li {
-    min-height: 62px;
-    padding: 18px 4px;
+    flex: 0 0 auto;
+    height: 62px;
+    min-height: 0;
+    padding: 0 4px;
     border-bottom: 1px solid rgba(27, 40, 83, 0.12);
-    color: var(--navy);
     font-size: 14px;
     line-height: 1.65;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.045em;
-    word-break: keep-all;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .dish-product-info li:nth-child(3) {
-    min-height: 172px;
-    padding: 22px 4px;
+    height: 270px;
     font-size: 13px;
     line-height: 1.65;
   }
 
-  .dish-product-info li:last-child {
-    min-height: 62px;
-  }
-
   .dish-product-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     min-width: 0;
     height: 42px;
     margin-top: 24px;
     padding: 0 8px;
-    background-color: var(--green);
-    color: #FFFFFF;
     font-size: 0;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    text-decoration: none;
+    font-weight: 600;
+    flex-shrink: 0;
   }
 
   .dish-product-card:nth-child(1) .dish-product-btn::before {
@@ -1628,417 +1444,113 @@
     font-size: 14px;
   }
 
-  .dish-products-grid {
-    align-items: stretch;
-  }
-
-  .dish-product-card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dish-product-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dish-product-info li {
-    min-height: 62px;
-  }
-
-  .dish-product-info li:nth-child(3) {
-    min-height: 198px;
-  }
-
-  .dish-product-info li:last-child {
-    min-height: 62px;
-  }
-
-  .dish-product-btn {
-    margin-top: 24px;
-  }
-
-  .dish-products-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    column-gap: 16px !important;
-    align-items: stretch !important;
-  }
-
-  .dish-product-card {
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .dish-product-info {
-    height: 456px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    border-top: 1px solid rgba(27, 40, 83, 0.12);
-  }
-
-  .dish-product-info li {
-    flex: 0 0 auto !important;
-    min-height: 0 !important;
-    height: 62px !important;
-    padding: 0 4px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-bottom: 1px solid rgba(27, 40, 83, 0.12);
-  }
-
-  .dish-product-info li:nth-child(1) {
-    height: 62px !important;
-  }
-
-  .dish-product-info li:nth-child(2) {
-    height: 62px !important;
-  }
-
-  .dish-product-info li:nth-child(3) {
-    height: 270px !important;
-    padding: 0 4px !important;
-    font-size: 13px !important;
-    line-height: 1.65 !important;
-  }
-
-  .dish-product-info li:nth-child(4) {
-    height: 62px !important;
-  }
-
-  .dish-product-btn {
-    width: 100% !important;
-    height: 42px !important;
-    margin-top: 24px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* 모바일 하단 고정 CTA */
+  /* fixed CTA */
   .dish-fixed-cta {
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 90;
-    width: 100%;
     height: 96px;
-    background-color: var(--navy);
   }
 
   .dish-fixed-cta-inner {
     width: 100%;
-    height: 100%;
     padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .dish-fixed-cta p {
-    margin: 0;
-    color: #FFFFFF;
-    font-size: 15px;
-    line-height: 1.45;
-    font-weight: 800;
-    letter-spacing: -0.04em;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
   }
 
   .dish-fixed-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     min-width: 98px;
-    height: 52px;
+    height: 44px;
     padding: 0 18px;
-    background-color: var(--green);
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 800;
+    font-size: 0;
     white-space: nowrap;
   }
 
   .dish-fixed-cta-btn::before {
     content: "구매하기";
-  }
-
-  .dish-fixed-cta-btn {
-    font-size: 0;
-  }
-
-  .dish-fixed-cta-btn::before {
     font-size: 14px;
   }
 }
-
-
 
 @media (max-width: 480px) {
   .dish-hero {
     height: 815px;
   }
 
-  .dish-hero-content {
-    left: 20px;
-    top: 108px;
-    width: calc(100% - 40px);
-  }
-
-  .dish-hero-title-wrap {
-    width: 222px;
-  }
-
-  .dish-hero-sub {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-
   .dish-clean-text {
+    width: 100%;
     padding: 56px 20px 58px;
   }
 
-  .dish-clean-text h2 {
-    font-size: 31px;
-    line-height: 1.32;
-  }
-
-  .dish-clean-text p {
-    font-size: 15px;
-    line-height: 1.75;
-  }
-
-  .dish-clean-visual {
-    height: 505px;
-    background-image: url("../images/dish_clean-visual_bg_m.jpg");
-    background-position: center top;
-  }
-
-  .dish-clean-badge-1 {
-    width: 60px;
-    right: 26px;
-    top: -31px;
-  }
-
-  /*   Dish clean section */
-  .dish-clean-badge-2 {
-    width: 76px;
-    left: 34px;
-    bottom: -27px;
-  }
-
-  /*  Dish feature section */
-  .dish-feature-section {
-    padding: 72px 18px 90px;
-  }
-
-  .dish-feature-row {
-    gap: 26px;
-  }
-
-  .dish-feature-row+.dish-feature-row {
-    margin-top: 72px;
-  }
-
-  .dish-feature-text h2 {
-    font-size: 26px;
-    line-height: 1.32;
-  }
-
-  .dish-feature-text p {
-    font-size: 15px;
-    line-height: 1.72;
-  }
-
-  /*  Dish lemon section */
-
-  .dish-lemon-text {
-    padding: 76px 20px 62px;
-  }
-
-  .dish-lemon-text h2 {
-    font-size: 30px;
-    line-height: 1.34;
-  }
-
-  .dish-lemon-text strong {
-    font-size: 15px;
-  }
-
-  .dish-lemon-text p {
-    font-size: 15px;
-    line-height: 1.75;
+  .dish-feature-row-2 .dish-feature-text,
+  .dish-feature-row-2 .dish-feature-image2 {
+    width: calc(100% - 36px);
   }
 
   .dish-lemon-visual {
     height: 456px;
-    background-image: url("../images/dish_lemon_bg_m.jpg");
-    background-position: center top;
-  }
-
-  .dish-lemon-badge {
-    width: 104px;
-    right: 22px;
-    top: -38px;
-  }
-
-  /* Dish gallery section */
-  .dish-gallery-section {
-    padding: 72px 0 96px;
   }
 
   .dish-gallery-item-1 {
     width: calc(100% - 132px);
-    margin-right: 20px;
   }
 
   .dish-gallery-item-2 {
     width: calc(100% - 96px);
-    margin-top: 42px;
-    margin-left: 16px;
   }
 
   .dish-gallery-item-3 {
     width: calc(100% - 52px);
-    margin-top: 42px;
-    margin-right: 18px;
   }
 
   .dish-gallery-badge {
-    width: 94px;
-    right: 26px;
     top: 462px;
-  }
-
-  /* Dish kitchen section  */
-  .dish-kitchen-text {
-    padding: 76px 20px 62px;
-  }
-
-  .dish-kitchen-text h2 {
-    font-size: 30px;
-    line-height: 1.34;
-  }
-
-  .dish-kitchen-text p {
-    font-size: 15px;
-    line-height: 1.75;
   }
 
   .dish-kitchen-visual {
     height: 444px;
-    background-image: url("../images/dish_kitchen_m.jpg");
-    background-position: center top;
-  }
-
-  /* Dish detail section */
-  .dish-detail-section {
-    padding: 72px 0 96px;
   }
 
   .dish-detail-img-1 {
     width: calc(100% - 132px);
-    margin-right: 20px;
   }
 
   .dish-detail-img-2 {
     width: calc(100% - 52px);
-    margin-top: 30px;
     margin-left: 16px;
   }
 
   .dish-detail-badge {
-    width: 182px;
+    left: auto;
     right: 18px;
+    top: auto;
     bottom: 58px;
   }
 
-  /*  Dish banana section */
   .dish-banana-section {
     padding: 126px 18px 96px;
   }
 
-  .dish-banana-inner {
-    gap: 28px;
-  }
-
   .dish-banana-text h2 {
     font-size: 28px;
-    line-height: 1.32;
   }
 
-  .dish-banana-text p {
-    font-size: 15px;
-    line-height: 1.75;
-  }
-
-  /*  Dish slide section */
-  .dish-slide-section {
-    padding: 92px 0 0;
-  }
-
-  .dish-slide-title {
-    margin-bottom: 52px;
-    padding: 0 20px;
-  }
-
-  .dish-slide-title h2 {
-    font-size: 30px;
-    line-height: 1.36;
-  }
-
-  .dish-image-swiper {
-    height: 526px;
-  }
-
-  .dish-image-swiper .swiper-slide {
-    width: 396px;
-    height: 526px;
-  }
-
-  /*  Dish products section */
   .dish-products-section {
     padding: 92px 17px 120px;
   }
 
   .dish-products-title {
+    width: 100%;
     margin-bottom: 58px;
-    font-size: 30px;
-    line-height: 1.34;
-  }
-
-  .dish-products-grid {
-    column-gap: 16px;
-  }
-
-  .dish-product-image {
-    height: 245px;
-    margin-bottom: 44px;
-  }
-
-  .dish-product-card h3 {
-    margin-bottom: 28px;
-    font-size: 15px;
-  }
-
-  .dish-product-info li {
-    min-height: 62px;
-    padding: 18px 4px;
-    font-size: 14px;
   }
 
   .dish-product-info li:nth-child(3) {
-    min-height: 172px;
-    padding: 22px 4px;
-    font-size: 13px;
+    height: 294px;
   }
 
-  .dish-product-btn {
-    height: 42px;
-    margin-top: 24px;
-  }
-
-  .dish-product-info li:nth-child(3) {
-    min-height: 214px;
+  .dish-product-info {
+    height: 480px;
   }
 }
