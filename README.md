@@ -1,8 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # WEEF
 
 > RE-FRESH, BE-FREE — 식물 유래 성분의 프리미엄 주방 세정 브랜드 WEEF 공식 반응형 웹사이트
+
+> ⚠️ **본 프로젝트는 [WEEF 공식 웹사이트](https://weef.co.kr/)를 클론코딩한 학습용 프로젝트입니다.**  
+> 디자인 및 콘텐츠의 저작권은 원본 제작자에게 있습니다.
 
 <br>
 
@@ -75,24 +76,34 @@ weef/
 - 현재 페이지 GNB에 하단 밑줄 인디케이터 (`is-active`)
 - 768px 이하에서 햄버거 버튼 + 슬라이드인 모바일 메뉴 + 딤 레이어
 - 메뉴 링크 클릭 또는 딤 영역 클릭 시 자동 닫힘
+<br>
+
+<div align="center">
+<img width="474" height="531" alt="Image" src="https://github.com/user-attachments/assets/b5c09ce2-8b02-44d4-b386-838dfd968ff3" />
+</div>
+<br>
 
 ### AOS 스크롤 애니메이션
 - `once: true`로 한 번만 재생, 성능 최적화
 - `fade-up`, `zoom-in`, `fade-left`, `fade-right` 방향별 애니메이션
 - ACC 히어로 타이틀은 데스크탑(`>768px`)에서만 JS로 동적 AOS 속성 부여
 - `ease-out-cubic` 이징으로 자연스러운 모션 구현
+<br>
+
+<div align="center">
+<img width="474" height="741" alt="Image" src="https://github.com/user-attachments/assets/1a83101c-25be-475f-9f5e-708e1aa82134" />
+</div>
+<br>
 
 ### Swiper 이미지 슬라이더
 - **ACC** — `loop` 무한 반복, `autoplay` 5초, 화살표 + 페이지네이션 도트
-
-<div align="center">
-  <img width="478" height="702" alt="Image" src="https://github.com/user-attachments/assets/85ff9bd1-3c75-48c3-951c-03fe73b1c06f" />
-</div>
-
 - **DISH** — `slidesPerView: auto` 다중 노출, 2.2초 고속 자동재생, 768px 기준 `centeredSlides` 분기 처리
+<br>
+
 <div align="center">
-  <img width="478" height="751" alt="Image" src="https://github.com/user-attachments/assets/2ef44b30-3c95-4d00-a2ee-02ff054638dd" />
+ <img width="478" height="751" alt="Image" src="https://github.com/user-attachments/assets/2ef44b30-3c95-4d00-a2ee-02ff054638dd" />
 </div>
+<br>
 
 ### 반응형 레이아웃
 - `clamp()`로 슬라이더 크기를 뷰포트에 맞게 유동 조절
@@ -102,6 +113,13 @@ weef/
 ### CSS 키프레임 애니메이션
 - 배지 요소에 `badgeSwing`, `badgeSwingRotateSmall` 적용
 - 3초 주기 `ease-in-out infinite`로 브랜드 생동감 연출
+<br>
+
+<div align="center">
+<img width="474" height="542" alt="Image" src="https://github.com/user-attachments/assets/a3b6c42c-0cad-40f8-a949-2e096e4cf255" />
+</div>
+
+<br>
 
 ### 고정 CTA 버튼
 - DISH LIQUID 페이지 하단 `position: fixed` CTA 배너로 구매 전환 유도
@@ -188,12 +206,10 @@ ACC 제품 섹션에서 슬라이더와 텍스트 영역이 중간 화면 크기
 - 라이브러리 공식 문서를 꼼꼼히 읽는 것이 버그 해결의 가장 빠른 경로임을 재확인
 - 디자인 시안의 수치를 px 고정값이 아닌 상대 단위로 번역하는 과정에서 `clamp()`의 실용성을 체감
 - 3일이라는 짧은 기간 안에 완성도를 높이기 위해 공통 컴포넌트 우선 작업의 중요성을 실감
-=======
-# 제목
-## 제목
-### 제목
-<img width="478" height="751" alt="Image" src="https://github.com/user-attachments/assets/2ef44b30-3c95-4d00-a2ee-02ff054638dd" />
->>>>>>> 2f9750fac35e980bfe594768011914cb0057c92f
-=======
 
->>>>>>> bc58e096401df3d91f83b2eb970f59c978d69a2f
+<br>
+
+## 🔗 참고
+
+- 원본 사이트 : [https://weef.co.kr/](https://weef.co.kr/)
+- 본 프로젝트는 학습 목적의 클론코딩이며 상업적 용도로 사용하지 않습니다.
