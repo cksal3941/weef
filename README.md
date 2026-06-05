@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # WEEF
 
 > RE-FRESH, BE-FREE — 식물 유래 성분의 프리미엄 주방 세정 브랜드 WEEF 공식 반응형 웹사이트
@@ -193,3 +194,6 @@ ACC 제품 섹션에서 슬라이더와 텍스트 영역이 중간 화면 크기
 ### 제목
 <img width="478" height="751" alt="Image" src="https://github.com/user-attachments/assets/2ef44b30-3c95-4d00-a2ee-02ff054638dd" />
 >>>>>>> 2f9750fac35e980bfe594768011914cb0057c92f
+=======
+
+>>>>>>> bc58e096401df3d91f83b2eb970f59c978d69a2f
