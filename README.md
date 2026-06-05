@@ -123,7 +123,12 @@ weef/
 
 ### 고정 CTA 버튼
 - DISH LIQUID 페이지 하단 `position: fixed` CTA 배너로 구매 전환 유도
+<br>
 
+<div align="center">
+<img width="474" height="747" alt="Image" src="https://github.com/user-attachments/assets/97000b16-0c0a-4927-9a34-0f798d55dea8" />
+</div>
+<br>
 <br>
 
 ## 🔧 문제 해결 과정
